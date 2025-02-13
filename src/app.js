@@ -4,6 +4,8 @@ import cookieParser from 'cookie-parser'
 
 const app = express()
 
+// CORS (Cross-Origin Resource Sharing) is a security feature implemented by web browsers to restrict requests from different origins (domains, protocols, or ports) to a web server. By default, browsers block such cross-origin requests to prevent security risks (like Cross-Site Request Forgery - CSRF).
+
 app.use(cors({
     origin: process.env.CORS_ORIGIN,
     credentials: true
