@@ -18,5 +18,12 @@ app.use(express.urlencoded({extended: true, limit: "16kb"})) //you can give nest
 app.use(express.static("public")) // public assets for people to access
 app.use(cookieParser())
 
+//routes import
+import userRouter from './routes/user.routes.js'
+
+//routes declartion
+app.use("/api/v1/users", userRouter)
+
+// http://localhost:8000/api/v1/users/register
 
 export { app }
